@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>HealthHub@UTM – BMI Result</title>
+</head>
+<body>
+<h2>Person Info</h2>
+
+<p>Name: <span th:text="${person.name}">Ali</span></p>
+<p>Year of Birth: <span th:text="${person.yob}">2001</span></p>
+<p>Weight: <span th:text="${person.weight}">0</span> kg</p>
+<p>Height: <span th:text="${person.height}">0</span> m</p>
+<p>BMI: <span th:text="${person.bmi}">0.0</span></p>
+<p>Category: <span th:text="${person.category}">Normal</span></p>
+
+<hr>
+<p>
+    View JSON API:
+    <a th:href="@{/api/person}">/api/person</a>
+</p>
+</body>
+</html>
