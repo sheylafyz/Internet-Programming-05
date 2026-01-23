@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<!-- Reuse header fragment dari Lab 3 -->
+<div th:insert="~{fragments.html :: header}"></div>
+
+<h2>BMI Records</h2>
+
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Name</th>
+        <th>Height (m)</th>
+        <th>Weight (kg)</th>
+        <th>BMI</th>
+        <th>Category</th>
+    </tr>
+
+    <tr th:each="p : ${records}">
+        <td th:text="${p.name}">Name</td>
+        <td th:text="${p.height}">0.0</td>
+        <td th:text="${p.weight}">0.0</td>
+        <td th:text="${p.bmiValue}">0.0</td>
+        <td th:text="${p.bmiCategory}">Normal</td>
+    </tr>
+</table>
+
+</body>
+</html>

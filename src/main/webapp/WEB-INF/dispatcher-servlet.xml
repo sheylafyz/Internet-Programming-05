@@ -11,15 +11,19 @@
         http://www.springframework.org/schema/mvc
         https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <!-- Scan controller -->
-    <context:component-scan base-package="com.secj3303.controller" />
+    <!-- SCAN BOTH PACKAGES -->
+    <context:component-scan base-package="my.utm.healthhub, com.secj3303"/>
 
-    <!-- Enable annotation-based Spring MVC -->
     <mvc:annotation-driven />
 
-    <!-- =============== -->
-    <!-- THYMELEAF SETUP -->
-    <!-- =============== -->
+    <!-- Message Source for i18n -->
+    <bean id="messageSource" 
+          class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename" value="messages"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
+
+    <!-- THYMELEAF -->
     <bean id="templateResolver"
           class="org.thymeleaf.spring6.templateresolver.SpringResourceTemplateResolver">
         <property name="prefix" value="/WEB-INF/templates/"/>
@@ -37,14 +41,4 @@
         <property name="characterEncoding" value="UTF-8"/>
     </bean>
 
-    <!-- =============== -->
-    <!-- MESSAGE SOURCE  -->
-    <!-- =============== -->
-    <bean id="messageSource"
-          class="org.springframework.context.support.ResourceBundleMessageSource">
-        <property name="basename" value="messages"/>
-    </bean>
-
-    <!-- Static resources -->
-    <mvc:resources mapping="/resources/**" location="/resources/" />
 </beans>

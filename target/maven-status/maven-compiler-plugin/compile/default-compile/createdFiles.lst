@@ -1,3 +1,12 @@
-com/secj3303/model/Person.class
+my/utm/healthhub/service/BmiServiceImpl.class
+my/utm/healthhub/newcontroller/SetterInjectionController.class
+my/utm/healthhub/newcontroller/ConstructorInjectionController.class
+my/utm/healthhub/service/BmiService.class
+my/utm/healthhub/newservice/NewBmiServiceSetterImpl.class
 com/secj3303/controller/HomeController.class
 com/secj3303/controller/ApiController.class
+my/utm/healthhub/model/Person.class
+my/utm/healthhub/newservice/NewBmiService.class
+com/secj3303/model/Person.class
+my/utm/healthhub/controller/BmiController.class
+my/utm/healthhub/newservice/NewBmiServiceConstructorImpl.class

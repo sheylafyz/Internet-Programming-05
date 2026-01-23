@@ -4,14 +4,15 @@ public class Person {
 
     private String name;
     private int yob;
-    private double weight; // kg
-    private double height; // m
+    private double weight;
+    private double height;
+    private double bmi;
+    private String category;
 
     private String fullName;
     private String email;
 
-    public Person() {
-    }
+    public Person() {}
 
     public Person(String name, int yob, double weight, double height) {
         this.name = name;
@@ -20,73 +21,36 @@ public class Person {
         this.height = height;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
+    public int getYob() { return yob; }
+    public double getWeight() { return weight; }
+    public double getHeight() { return height; }
+    public double getBmi() { return bmi; }
+    public String getCategory() { return category; }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setName(String name) { this.name = name; }
+    public void setYob(int yob) { this.yob = yob; }
+    public void setWeight(double weight) { this.weight = weight; }
+    public void setHeight(double height) { this.height = height; }
 
-    public int getYob() {
-        return yob;
-    }
+    // 🔥 INI WAJIB ADA BUAT LAB 4
+    public void setBmi(double bmi) { this.bmi = bmi; }
+    public void setCategory(String category) { this.category = category; }
 
-    public void setYob(int yob) {
-        this.yob = yob;
-    }
-
-    public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
-
-    public double getHeight() {
-        return height;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
+    // buat Lab 3 (biar gak rusak)
     public String getFullName() {
         return (fullName != null) ? fullName : name;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public double getBmi() {
-        if (height <= 0) return 0;
-        return weight / (height * height);
-    }
-
-    public String getCategory() {
-        double bmi = getBmi();
-        if (bmi == 0) return "Unknown";
-        if (bmi < 18.5) return "Underweight";
-        if (bmi < 25) return "Normal";
-        if (bmi < 30) return "Overweight";
-        return "Obese";
-    }
+    public void setFullName(String fullName) { this.fullName = fullName; }
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
 
     public double getBmiValue() {
-        return getBmi();
+        return bmi;
     }
 
     public String getBmiCategory() {
-        return getCategory();
+        return category;
     }
 }
