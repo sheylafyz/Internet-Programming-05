@@ -11,23 +11,25 @@
         http://www.springframework.org/schema/mvc
         https://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <!-- SCAN BOTH PACKAGES -->
-    <context:component-scan base-package="my.utm.healthhub, com.secj3303"/>
+    <!-- Scan controllers, services, dao -->
+    <context:component-scan base-package="my.utm.healthhub,com.secj3303"/>
 
+    <!-- Enable @Controller, @GetMapping, etc -->
     <mvc:annotation-driven />
 
-    <!-- Message Source for i18n -->
-    <bean id="messageSource" 
+    <!-- i18n -->
+    <bean id="messageSource"
           class="org.springframework.context.support.ResourceBundleMessageSource">
         <property name="basename" value="messages"/>
         <property name="defaultEncoding" value="UTF-8"/>
     </bean>
 
-    <!-- THYMELEAF -->
+    <!-- THYMELEAF (WEB-INF/templates) -->
     <bean id="templateResolver"
           class="org.thymeleaf.spring6.templateresolver.SpringResourceTemplateResolver">
         <property name="prefix" value="/WEB-INF/templates/"/>
         <property name="suffix" value=".html"/>
+        <property name="templateMode" value="HTML"/>
         <property name="characterEncoding" value="UTF-8"/>
     </bean>
 

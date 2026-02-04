@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<h2>Add BMI Record (JDBC)</h2>
+
+<form th:action="@{/bmi/jdbc/add}" method="post">
+    Name: <input type="text" name="name"/><br/>
+    Height: <input type="text" name="height"/><br/>
+    Weight: <input type="text" name="weight"/><br/>
+    <button type="submit">Save</button>
+</form>
+
+</body>
+</html>

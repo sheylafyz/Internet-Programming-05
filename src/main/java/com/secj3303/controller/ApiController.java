@@ -1,6 +1,6 @@
 package com.secj3303.controller;
 
-import com.secj3303.model.Person;
+import my.utm.healthhub.model.Person;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

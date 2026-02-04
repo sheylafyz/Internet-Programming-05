@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<h2>BMI Records (JDBC)</h2>
+
+<p th:text="${records.size()} + ' record(s) found'">0 record(s) found</p>
+
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Name</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>BMI</th>
+        <th>Category</th>
+    </tr>
+
+    <tr th:if="${#lists.isEmpty(records)}">
+        <td colspan="5">No records found.</td>
+    </tr>
+
+    <tr th:each="p : ${records}">
+        <td th:text="${p.name}">Name</td>
+        <td th:text="${p.height}">0.0</td>
+        <td th:text="${p.weight}">0.0</td>
+        <td th:text="${p.bmi}">0.0</td>
+        <td th:text="${p.category}">Normal</td>
+    </tr>
+</table>
+
+</body>
+</html>

@@ -1,6 +1,6 @@
 package com.secj3303.controller;
 
-import com.secj3303.model.Person;
+import my.utm.healthhub.model.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

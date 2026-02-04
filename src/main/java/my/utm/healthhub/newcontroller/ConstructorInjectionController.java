@@ -1,6 +1,8 @@
 package my.utm.healthhub.newcontroller;
 
 import my.utm.healthhub.newservice.NewBmiService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +12,8 @@ public class ConstructorInjectionController {
 
     private final NewBmiService constructorBmiService;
 
-    public ConstructorInjectionController(NewBmiService constructorBmiService) {
+    @Autowired
+    public ConstructorInjectionController(@Qualifier("newBmiServiceConstructorImpl") NewBmiService constructorBmiService) {
         this.constructorBmiService = constructorBmiService;
     }
 

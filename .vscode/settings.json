@@ -1,0 +1,8 @@
+{
+  "tomcat.servers": [
+    {
+      "name": "Tomcat 11",
+      "path": "/opt/homebrew/Cellar/tomcat/11.0.12/libexec"
+    }
+  ]
+}
